@@ -12,9 +12,9 @@
   <tr>
     <td>{{task.title}}</td>
     <td>{{task.content}}</td>
-    <td><a href="{% url 'tasks:detail' task.id %}">詳細</a></td>
-    <td><a href="{% url 'tasks:edit' task.id %}">編集</a></td>
-    <td><a href="{% url 'tasks:delete' task.id %}">削除</a></td>
+    <td><a href="{% url 'tasks:detail' task.id %}">Detail</a></td>
+    <td><a href="{% url 'tasks:edit' task.id %}">Edit</a></td>
+    <td><a href="{% url 'tasks:delete' task.id %}">Delete</a></td>
   </tr>
   {% endfor %}
 </table>

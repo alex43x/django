@@ -11,9 +11,14 @@
 
   <body>
     <nav>
-      <ul>
-        <li><a href="{% url 'tasks:index' %}">タスク一覧</a></li>
-      </ul>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'tasks:index' %}">Blog List</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+      <li><a href="{% url 'user_detail' user.pk %}">User Detail</a></li>
+      {% else %}
+      <li><a href="{% url 'login' %}">Login</a></li>
+      <li><a href="{% url 'signup' %}">User Registration</a></li>
+      {% endif %}
     </nav>
     <main>
       <div>
